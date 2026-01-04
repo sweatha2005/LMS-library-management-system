@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>📚 Library Management System</h1>
+
+<!-- ADD BOOK FORM -->
+<div class="form">
+  <input id="title" placeholder="Book Title">
+  <input id="author" placeholder="Author">
+  <input id="category" placeholder="Category">
+  <input id="year" type="number" placeholder="Published Year">
+  <input id="copies" type="number" placeholder="Available Copies">
+  <button onclick="addBook()">Add Book</button>
+</div>
+
+<h2>📖 Book List</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Category</th>
+      <th>Year</th>
+      <th>Copies</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody id="bookTable"></tbody>
+</table>
+
+<!-- SEARCH TOGGLE (BOTTOM) -->
+<div class="search-box">
+  <h2>🔍 Search Books</h2>
+
+  <select id="searchType">
+    <option value="title">By Title</option>
+    <option value="category">By Category</option>
+    <option value="year">By Published Year</option>
+  </select>
+
+  <input id="searchInput" placeholder="Enter search value">
+  <button onclick="searchBooks()">Search</button>
+  <button class="reset" onclick="loadBooks()">Reset</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
