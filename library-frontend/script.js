@@ -1,4 +1,4 @@
-const API = "https://lms-library-management-system.onrender.com";
+const API = "https://lms-library-management-system.onrender.com/api/books";
 
 let allBooks = [];
 
@@ -70,7 +70,7 @@ async function deleteBook(id, copies) {
   loadBooks();
 }
 
-/* SEARCH (NEW FEATURE) */
+/* SEARCH */
 function searchBooks() {
   const type = document.getElementById("searchType").value;
   const value = document.getElementById("searchInput").value.toLowerCase();
